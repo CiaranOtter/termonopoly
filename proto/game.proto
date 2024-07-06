@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+option go_package="termonopoly/comm";
+
+message Connect {
+    string playerName = 1;
+    int32 Pos = 2;
+    repeated string Order = 3;
+}
+
+message StartGame {
+
+}
+enum ActionType {
+    MOVE = 0;
+    SEND = 1;
+    RECV = 2;
+}
+
+message Action {
+    ActionType type =1;
+    oneof action {
+        Move move = 2;
+        Trans trans = 3;
+    }
+}
+
+message Move {
+    int32 dist = 1;
+    bool pass = 2;
+}
+
+message Trans {
+    int32 amount = 1;
+}
+
+message Message {
+    MessageType type = 1;
+    oneof data {
+        Connect con = 2;
+        Action act = 3;
+    }
+}
+
+enum MessageType {
+    CONNECT = 0;
+    START_GAME = 1;
+    PLAYER_JOIN = 2;
+    START_TURN = 3;
+    END_TURN = 4;
+    ACTION = 5;
+}
+
+service Termonopoly {
+    rpc GameStream(stream Message) returns(stream Message);
+}

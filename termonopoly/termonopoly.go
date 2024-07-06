@@ -31,6 +31,17 @@ var UsedChanceCards []*ChanceCard
 var UsedCommunityCards []*CommunityCard
 var Players []*Player
 
+func InitPlayers(count int) []*Player {
+	var players = make([]*Player, count)
+
+	for i := 0; i < count; i++ {
+		player := InitPlayer(fmt.Sprintf("Player %d", i))
+		players[i] = &player
+	}
+
+	return players
+}
+
 func ListAvailable() {
 	for colour, group := range Properties {
 		fmt.Printf("%s: \n", colour)

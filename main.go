@@ -39,7 +39,7 @@ func main() {
 
 	terminal = false
 	player_count := 2
-	termonopoly.Players = initPlayers(player_count)
+	termonopoly.Players = termonopoly.InitPlayers(player_count)
 	index := 0
 
 	for {
@@ -81,15 +81,4 @@ func main() {
 	}
 
 	fmt.Printf("=============================\n")
-}
-
-func initPlayers(count int) []*termonopoly.Player {
-	var players = make([]*termonopoly.Player, count)
-
-	for i := 0; i < count; i++ {
-		player := termonopoly.InitPlayer(fmt.Sprintf("Player %d", i))
-		players[i] = &player
-	}
-
-	return players
 }

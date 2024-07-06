@@ -5,6 +5,7 @@ import (
 	"slices"
 	"strconv"
 	"strings"
+	"termonopoly/termonopoly/comm"
 )
 
 type Player struct {
@@ -19,6 +20,7 @@ type Player struct {
 	JailCount   int
 	NetWorth    int
 	Bankrupt    bool
+	Stream      comm.Termonopoly_GameStreamClient
 }
 
 func (p *Player) Print() {
@@ -85,6 +87,20 @@ func (p *Player) Spend(amount int) {
 	fmt.Printf("Spent %d\n", amount)
 	fmt.Printf("%d remaining\n", p.Cash)
 	fmt.Print("\n")
+
+	p.Stream.Send(&comm.Message{
+		Type: comm.MessageType_ACTION,
+		Data: &comm.Message_Act{
+			&comm.Action{
+				Type: comm.ActionType_SEND,
+				Action: &comm.Action_Trans{
+					&comm.Trans{
+						Amount: int32(amount),
+					},
+				},
+			},
+		},
+	})
 }
 
 func (p *Player) Receive(amount int) {
@@ -95,6 +111,20 @@ func (p *Player) Receive(amount int) {
 	fmt.Printf("Received %d\n", amount)
 	fmt.Printf("%d in account\n", p.Cash)
 	fmt.Printf("\n")
+
+	p.Stream.Send(&comm.Message{
+		Type: comm.MessageType_ACTION,
+		Data: &comm.Message_Act{
+			&comm.Action{
+				Type: comm.ActionType_RECV,
+				Action: &comm.Action_Trans{
+					&comm.Trans{
+						Amount: int32(amount),
+					},
+				},
+			},
+		},
+	})
 }
 
 func (p *Player) AddProperty(prop *Property) {
@@ -163,12 +193,28 @@ func (p *Player) MoveDist(dist int, pass bool) {
 	}
 
 	p.Pos = iter
+
+	// move := &comm.Message{
+	// 	Type: comm.MessageType_ACTION,
+	// 	Data: &comm.Message_Act{
+	// 		&comm.Action{
+	// 			Action: &comm.Action_Move{
+	// 				&comm.Move{
+	// 					Dist: int32(dist),
+	// 					Pass: pass,
+	// 				},
+	// 			},
+	// 		},
+	// 	},
+	// }
+
+	// p.Stream.Send(move)
 	iter.OnLand(p)
 }
 
 func (p *Player) MoveTo(name string, pass bool) {
 	iter := p.Pos.Next()
-
+	total := 1
 	for strings.Compare(iter.GetName(), name) != 0 {
 
 		if pass {
@@ -176,6 +222,7 @@ func (p *Player) MoveTo(name string, pass bool) {
 		}
 
 		iter = iter.Next()
+		total++
 	}
 
 	p.Pos = iter
