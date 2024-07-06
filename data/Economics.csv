@@ -1,0 +1,41 @@
+Space Name,Family,Frequency,Price,Improvement Cost,Utility Rent,Railroad Rent,Property Rent,Rent with Set,Rent 1 House,2 Houses,3 Houses,4 Houses,Hotel,X-Pos,Y-Pos
+Jail,Corners,5.855%,,,,,,0,,,,,,1,1
+Illinois Ave,Red,2.913%,240,150,,,20,40,100,300,750,925,1100,5,11
+New York Ave,Orange,2.720%,200,100,,,16,32,80,220,600,800,1000,1,10
+Go,Corners,2.807%,,,,,,0,,,,,,11,1
+B & O Railroad,Railroads,2.778%,200,,,25,,0,,,,,,6,11
+Reading Railroad,Railroads,2.718%,200,,,25,,0,,,,,,6,1
+Community Chest #2,Cards,2.672%,,,,,,0,,,,,,1,8
+Tennessee Ave,Orange,2.580%,180,100,,,14,28,70,200,550,750,950,1,9
+Pennsylvania Railroad,Railroads,2.733%,200,,,25,,0,,,,,,1,6
+Kentucky Ave,Red,2.547%,220,150,,,18,36,90,250,700,875,1050,2,11
+Community Chest #3,Cards,2.510%,,,,,,0,,,,,,11,8
+St. James Place,Orange,2.628%,180,100,,,14,28,70,200,550,750,950,1,7
+Indiana Ave,Red,2.527%,220,150,,,18,36,90,250,700,875,1050,4,11
+Chance #2,Cards,2.693%,,,,,,0,,,,,,3,11
+Free Parking,Corners,2.778%,,,,,,0,,,,,,1,11
+Atlantic Ave,Yellow,2.528%,260,150,,,22,44,110,330,800,975,1150,7,11
+Pacific Ave,Green,2.443%,300,200,,,26,52,130,390,900,1100,1275,11,10
+Water Works,Utilities,2.377%,150,,7,,,0,,,,,,9,11
+St. Charles Place,Magenta,2.450%,140,100,,,10,20,50,150,450,625,750,1,2
+Ventnor Ave,Yellow,2.623%,260,150,,,22,44,110,330,800,975,1150,8,11
+North Carolina Ave,Green,2.475%,300,200,,,26,52,130,390,900,1100,1275,11,9
+Virginia Ave,Magenta,2.423%,160,100,,,12,24,60,180,500,700,900,1,5
+Go To Jail,Corners,2.408%,,,,,,0,,,,,,11,11
+Marvin Gardens,Yellow,2.465%,280,150,,,24,48,120,360,850,1025,1200,10,11
+Pennsylvania Ave,Green,2.267%,320,200,,,28,56,150,450,1000,1200,1400,11,7
+Boardwalk,Dark Blue,2.455%,400,200,,,50,100,200,600,1400,1700,2000,11,2
+States Ave,Magenta,2.132%,140,100,,,10,20,50,150,450,625,750,1,4
+Electric Company,Utilities,2.287%,150,na,7,,,0,,,,,,1,3
+Short Line,Railroads,2.272%,200,,,25,,0,,,,,,11,6
+Income Tax,Tax,2.132%,,,,,,0,,,,,,7,1
+Chance #1,Cards,2.180%,,,,,,0,,,,,,4,1
+Oriental Ave,Light Blue,2.040%,100,50,,,6,12,30,90,270,400,550,5,1
+Connecticut Ave,Light Blue,2.127%,120,50,,,8,16,40,100,300,450,600,2,1
+Vermont Ave,Light Blue,2.173%,100,50,,,6,12,30,90,270,400,550,3,1
+Luxury Tax,Tax,1.847%,,,,,,0,,,,,,11,3
+Mediterranean Ave,Purple,2.007%,60,50,,,2,4,10,30,90,160,250,10,1
+Park Place,Dark Blue,2.052%,350,200,,,35,70,175,500,1100,1300,1500,11,4
+Baltic Ave,Purple,2.090%,60,50,,,4,8,20,60,180,320,450,8,1
+Community Chest #1,Cards,2.083%,,,,,,0,,,,,,9,1
+Chance #3,Cards,2.205%,,,,,,0,,,,,,11,5
