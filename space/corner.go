@@ -14,7 +14,7 @@ func (c *Corner) Print() {
 }
 
 func CornerFactory(row []string) game.SpaceInterface {
-	fmt.Printf("Corner Item\n")
+	// fmt.Printf("Corner Item\n")
 	switch row[1] {
 	case "Go":
 		g := &Go{}

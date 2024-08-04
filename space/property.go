@@ -1,7 +1,6 @@
 package space
 
 import (
-	"fmt"
 	"log"
 	"strconv"
 	"termonopoly/game"
@@ -43,7 +42,7 @@ func (p *Property) Afford(budget int) (int, bool) {
 }
 
 func (p *Property) Print() {
-	fmt.Printf("Property: \033[%dm%s\033[0m\nColour: \033[%dm%d\033[0m\n", p.Colour, p.Name, p.Colour, p.Colour)
+	// fmt.Printf("Property: \033[%dm%s\033[0m\nColour: \033[%dm%d\033[0m\n", p.Colour, p.Name, p.Colour, p.Colour)
 }
 
 func (p *Property) OnLand(pl game.OwnerInterface) {
@@ -60,7 +59,7 @@ func (p *Property) OnLand(pl game.OwnerInterface) {
 }
 
 func NewProperty(row []string) *Property {
-	fmt.Printf("Property item\n")
+	// fmt.Printf("Property item\n")
 
 	prop := &Property{
 		Owner: nil,

@@ -1,7 +1,6 @@
 package space
 
 import (
-	"fmt"
 	"strings"
 	"termonopoly/game"
 )
@@ -11,11 +10,11 @@ type Tax struct {
 }
 
 func (t *Tax) Print() {
-	fmt.Printf("Tax space\n")
+	// fmt.Printf("Tax space\n")
 }
 
 func NewTax(row []string) *Tax {
-	fmt.Printf("Tax space\n")
+	// fmt.Printf("Tax space\n")
 	return &Tax{}
 }
 
@@ -24,7 +23,7 @@ type CardSpace struct {
 }
 
 func CardSpaceFactory(row []string) game.SpaceInterface {
-	fmt.Printf("Card space\n")
+	// fmt.Printf("Card space\n")
 
 	if strings.Contains(row[1], "Chance") {
 		return NewChance(row)
@@ -42,11 +41,11 @@ type CommunityChest struct {
 }
 
 func (cc *CommunityChest) Print() {
-	fmt.Printf("Community chest space\n")
+	// fmt.Printf("Community chest space\n")
 }
 
 func NewCommunityChest(row []string) *CommunityChest {
-	fmt.Printf("Community chest item\n")
+	// fmt.Printf("Community chest item\n")
 	return &CommunityChest{}
 }
 
@@ -55,11 +54,11 @@ type ChanceCard struct {
 }
 
 func (cc *ChanceCard) Print() {
-	fmt.Printf("Chance card space\n")
+	// fmt.Printf("Chance card space\n")
 }
 
 func NewChance(row []string) *ChanceCard {
-	fmt.Printf("Chance card item\n")
+	// fmt.Printf("Chance card item\n")
 	return &ChanceCard{}
 }
 
@@ -68,11 +67,11 @@ type RailRoads struct {
 }
 
 func (r *RailRoads) Print() {
-	fmt.Printf("Railroad: %s\n", r.Name)
+	// fmt.Printf("Railroad: %s\n", r.Name)
 }
 
 func NewRailRoad(row []string) *RailRoads {
-	fmt.Printf("Rail road item\n")
+	// fmt.Printf("Rail road item\n")
 	r := &RailRoads{}
 	r.SetName(row[1])
 	r.SetPrice(row[3])
@@ -86,11 +85,11 @@ type UtilitiesSpace struct {
 }
 
 func (u *UtilitiesSpace) Print() {
-	fmt.Printf("Utilities: %s\n", u.Name)
+	// fmt.Printf("Utilities: %s\n", u.Name)
 }
 
 func NewUtilities(row []string) *UtilitiesSpace {
-	fmt.Printf("Utilities space\n")
+	// fmt.Printf("Utilities space\n")
 	u := &UtilitiesSpace{}
 	u.SetName(row[1])
 	u.SetPrice(row[3])
